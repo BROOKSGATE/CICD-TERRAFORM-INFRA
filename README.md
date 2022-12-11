@@ -113,6 +113,7 @@ Once both the above steps are done click on Save.
  -Go to the terminal - ssh - change to root
 - sudo su 
  cd /var/lib/jenkins/workspace/app-infra-pipeline
+ 
 terraform destroy
 
 # Happy learning, everyone 😊 😊
