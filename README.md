@@ -108,4 +108,11 @@ Once both the above steps are done click on Save.
 2) #### Skipping all the checks on the Jenkins file comment the checkov scan lines accordingly with # (sure to shell)
 
 ## Finally observe the whole flow and understand the integrations :) 
+
+### To delete the created pipeline
+ -Go to the terminal - ssh - change to root
+- sudo su 
+ cd /var/lib/jenkins/workspace/app-infra-pipeline
+terraform destroy
+
 # Happy learning, everyone 😊 😊
