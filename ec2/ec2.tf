@@ -62,11 +62,11 @@ resource "aws_iam_instance_profile" "instance_profile" {
 
 resource "aws_instance" "web_server" {
   ami                    = "ami-0b5eea76982371e91"
-  instance_type          = "t2.large"
+  instance_type          = "t2.micro"
   key_name               = "jenkins"
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   user_data              = file("scripts/userdata.sh")
-  iam_instance_profile   = aws_iam_instance_profile.instance_profile.name
+  iam_instance_profile   = IAM-AdministratorFullAccess
   tags                   = merge(var.tags, { Name = join("", [var.name, "-", "webserver"]) }, { Environment = var.name })
 
   # best practices as per checkov scanner
